@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #D1D5DB #F3F4F6;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #F3F4F6;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #D1D5DB;
+    border-radius: 3px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: #9CA3AF;
+  }
+}
+
+@keyframes flame-flicker {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.1) rotate(2deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(0.9) rotate(-2deg);
+    opacity: 0.9;
+  }
+  75% {
+    transform: scale(1.05) rotate(1deg);
+    opacity: 0.85;
+  }
+}
+
+.animate-flame {
+  animation: flame-flicker 3s ease-in-out infinite;
+  transform-origin: center bottom;
+  color: #F97316;
+}
+
+/* Add horizontal scroll styles */
+.scroll-x {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #D1D5DB #F3F4F6;
+}
+
+.scroll-x::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scroll-x::-webkit-scrollbar-track {
+  background: #F3F4F6;
+}
+
+.scroll-x::-webkit-scrollbar-thumb {
+  background-color: #D1D5DB;
+  border-radius: 3px;
+}
+
+.scroll-x::-webkit-scrollbar-thumb:hover {
+  background-color: #9CA3AF;
+}
